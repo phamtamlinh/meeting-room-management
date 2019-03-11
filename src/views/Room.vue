@@ -17,8 +17,7 @@
             <ul
               v-for="(eventDetails, id) of events"
               :key="id"
-            >
-              <li>{{ eventDetails.subject }}</li>
+            ><strong>{{ eventDetails.subject }}</strong>
               <li>{{ eventDetails.start }}</li>
               <li>{{ eventDetails.end }}</li>
             </ul>

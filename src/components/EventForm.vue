@@ -1,7 +1,6 @@
 <template>
   <form @submit.prevent="onSubmit">
     <div class="event-form" :style="{ top: topPosition, left: leftPosition }">
-    <!-- <div class="event-form" :style="{ top: '50px', left: '50px', width: '200px' }"> -->
       <div class="row">
         <span class="close u-pull-right" @click="$emit('form-closed')">X</span>
       </div>

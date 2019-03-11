@@ -1,5 +1,7 @@
 # meeting-room-management
 
+This small project allows people to select a date in the calendar and book the available meeting rooms. Since there's no server side, it reads and writes to browser local storage.
+
 ## Project setup
 ```
 npm install

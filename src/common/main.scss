@@ -1,0 +1,129 @@
+@import 'variables';
+$grid-row-height: 12.3vh;
+
+button {
+  margin-bottom: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+input[type="text"], textarea, select, fieldset {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 30px;
+  &:focus {
+    border: 1px solid $primary;
+  }
+}
+span.close {
+  color: $primary;
+  margin-right: 5px;
+  cursor: pointer;
+  &:hover, &:focus {
+    color: darken($primary,3%)
+  }
+}
+th, td {
+  vertical-align: text-top;
+}
+.vue-calendar {
+  display: grid;
+  grid-template-rows: 7% 93%;
+  background: #fff;
+  margin: 0 auto;
+}
+.calendar-header {
+  align-items: center;
+}
+.header-left, .header-right {
+  flex: 1;
+}
+.header-center {
+  flex: 3;
+  text-align: center;
+}
+.title {
+  margin: 0 5px;
+}
+.next-month, .prev-month {
+  cursor: pointer;
+}
+.calendar-body {
+  display: grid;
+  grid-template-rows: 5% 95%;
+}
+.days-header {
+  display: grid;
+  grid-auto-columns: 14.25%;
+  grid-template-areas: "a a a a a a a";
+  border-bottom: 1px solid #e0e0e0;
+}
+.days-body {
+  display: grid;
+  grid-template-rows: auto;
+}
+.day-number {
+  text-align: right;
+  margin-right: 10px;
+}
+.day-label {
+  text-align: center;
+}
+.week-row {
+  display: grid;
+  grid-template-areas: "a a a a a a a";
+  grid-row-gap: 5px;
+  grid-auto-columns: 14.25%;
+  grid-auto-rows: $grid-row-height;
+  border-left: 1px solid #e0e0e0;
+}
+.week-day {
+  padding: 4px;
+  grid-auto-rows: $grid-row-height;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  .disabled {
+    background-color: #f5f5f5;
+  }
+  &.not-current > .day-number {
+    color: #c3c3c3;
+  }
+  &.today > .day-number {
+    height: 25px;
+    width: 25px;
+    background-color: $primary;
+    border-radius: 50%;
+    font-weight: 700;
+    color: $white;
+    float: right;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+.events {
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 0 0 4px;
+  .event {
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+  }
+  .more-link {
+    color: $primary;
+  }
+}
+.event-form {
+  border: 1px solid $primary;
+  background-color: $white;
+  position: fixed;
+  width: 20vw;
+}
+.event-body {
+  padding: 0 20px 20px;
+}
+.vdpComponent {
+  width: 100%;
+}

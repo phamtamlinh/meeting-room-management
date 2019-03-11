@@ -9,9 +9,14 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "fecha": "^3.0.2",
+    "moment": "^2.24.0",
     "register-service-worker": "^1.5.2",
+    "skeleton-css": "^2.0.4",
     "vue": "^2.6.6",
+    "vue-date-pick": "^1.1.0",
     "vue-router": "^3.0.1",
+    "vue2-simple-calendar": "^1.0.8",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
